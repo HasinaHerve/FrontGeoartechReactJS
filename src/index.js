@@ -1,9 +1,14 @@
+import 'font-awesome/css/font-awesome.min.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHistory, faHouse, faNewspaper, faTable } from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+library.add(faHouse, faNewspaper, faTable);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
