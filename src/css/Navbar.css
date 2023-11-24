@@ -1,0 +1,16 @@
+.logo {
+    width: 70px;
+}
+
+.utilisateur{
+  padding-right:100px;
+}
+.navbar{
+ z-index: 2;
+}
+.nav-link{
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(2, 182, 83);
+}

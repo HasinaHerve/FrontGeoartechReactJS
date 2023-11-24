@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Actualite from './Actualite';
+import Navbar from './Composants/Navbar';
+
 
 const App = () => {
   return (
