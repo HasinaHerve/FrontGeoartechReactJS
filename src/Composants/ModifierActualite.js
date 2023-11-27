@@ -54,7 +54,6 @@ const enregistrer = async (e) => {
     }
     if(error.response.status===500){
         alert(error.response.data)
-        console.log(formData);
         modifChargement(false);
     }
   })

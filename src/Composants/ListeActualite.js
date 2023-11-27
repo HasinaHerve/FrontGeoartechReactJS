@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Chargement from './Chargement';
+import '../css/liste.css';
+
 import { Link, useNavigate } from "react-router-dom";
 
 const ListeActualite = () => {
@@ -71,7 +73,7 @@ const ListeActualite = () => {
                 <td>{item.titre}</td>
                 <td>{item.descriptionActualite}</td>
                 <td>{item.dateEvenement}</td>
-                <td>{item.photosActualite}</td>
+                <td><img src={"http://localhost:8000/storage/"+item.photosActualite} alt="Photo"/></td>
                 <td><Link to={`/modifierActualite/${item.id}`} class="btn btn-secondary">Modifier</Link></td>
                 <td><button type="button" onClick={(e) => supprimerActualite(e, item.id)} class="btn btn-danger">Suprimer</button></td>
               </tr>
