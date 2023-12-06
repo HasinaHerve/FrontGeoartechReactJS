@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar from './Composants/Navbar';
+import Login from './Composants/Login';
+import Routeur from './Composants/Routeur';
 
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      <Routeur />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NavLink from './Navlink';
+import Navbar from './Navbar';
 import Accueil from './Accueil';
 import Actualite from './Actualite';
 import Portfolio from './Portfolio';
@@ -11,13 +11,14 @@ import AjouterPortfolio from './AjouterPortfolio';
 import ModifierPortfolio from './ModifierPortfolio';
 import AjouterPersonnel from './AjouterPersonnel';
 import ModifierPersonnel from './ModifierPersonnel';
+import Login from './Login';
 
-const Navbar = () => {
+const Routeur = () => {
   return (
     <div className="container-fluid">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<NavLink />}>
+          <Route path="/" element={<Navbar />}>
             <Route path="accueil" element={<Accueil />} />
             <Route path="actualite" element={<Actualite />} />
             <Route path="portfolio" element={<Portfolio />} />
@@ -29,10 +30,11 @@ const Navbar = () => {
             <Route path="ajouterPersonnel" element={<AjouterPersonnel />} />
             <Route path="modifierPersonnel/:id" element={<ModifierPersonnel />} />
           </Route>
+          <Route path="login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
 
-export default Navbar;
+export default Routeur;

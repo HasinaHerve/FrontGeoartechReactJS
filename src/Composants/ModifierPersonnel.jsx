@@ -35,13 +35,13 @@ const enregistrer = async (e) => {
   e.preventDefault();
   modifChargement(false);
   const formData  = new FormData();
-  formData.append('titre', donnee.titre);
-  formData.append('descriptionPersonnel', donnee.descriptionPersonnel);
-  formData.append('dateEvenement', donnee.dateEvenement);
+  formData.append('id', donnee.id);
+  formData.append('nom', donnee.nom);
+  formData.append('prenoms', donnee.prenoms);
+  formData.append('poste', donnee.poste);
   formData.append('fichier', fichier);
-  console.log(formData);
   
-  axios.put(`http://127.0.0.1:8000/api/modifierPersonnel/${donnee.id}`, formData)
+  axios.post(`http://127.0.0.1:8000/api/modifierPersonnel`, formData)
   .then(res=>{
         alert("Modification effectuée");
         modifChargement(false);
@@ -79,6 +79,7 @@ const enregistrer = async (e) => {
                 <form onSubmit={enregistrer}>
                   <div className="mb-3 mt-3">
                     <label for="nom" class="form-label">Nom:</label>
+                    <input type="hidden" name="id" value={donnee.id}/>
                     <input type="text" class="form-control" id="text" placeholder="Nom du personnel" name="nom" value={donnee.nom} onChange={recupDonnee} required />
                   </div>
                   <div className="mb-3 mt-3">

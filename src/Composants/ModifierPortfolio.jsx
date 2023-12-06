@@ -34,14 +34,14 @@ const recupDonnee = (e) => {
 const enregistrer = async (e) => {
   e.preventDefault();
   modifChargement(false);
-  const formData = {
-    nomEntreprise: donnee.nomEntreprise,
-    descriptionPortfolio: donnee.descriptionPortfolio, 
-    lien: donnee.lien,
-    fichier: fichier, 
-  };
+  const formData  = new FormData();
+  formData.append('id', donnee.id);
+  formData.append('nomEntreprise', donnee.nomEntreprise);
+  formData.append('descriptionPortfolio', donnee.descriptionPortfolio);
+  formData.append('lien', donnee.lien);
+  formData.append('fichier', fichier);
   
-  axios.put(`http://127.0.0.1:8000/api/modifierPortfolio/${donnee.id}`, formData)
+  axios.post(`http://127.0.0.1:8000/api/modifierPortfolio`, formData)
   .then(res=>{
         alert("Modification effectuée");
         modifChargement(false);

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import geo from '../images/geo.jpg';
 import '../css/Navbar.css';
 
-const NavLink = () => {
+const Navbar = () => {
   return (
     <>
         <div className="container-fluid">
@@ -27,6 +27,13 @@ const NavLink = () => {
                             <li className="nav-item">
                                 <Link to="/Personnel" className="nav-link"><FontAwesomeIcon icon={"users"} />&nbsp;Personnel</Link>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><FontAwesomeIcon icon="user" />&nbsp;Admin</a>
+                                <ul class="dropdown-menu">
+                                    <li><Link to="/Personnel" className="dropdown-item nav-link">Ajouter</Link></li>
+                                    <li><Link to="/Login" className="dropdown-item nav-link">Se déconnecter</Link></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -37,4 +44,4 @@ const NavLink = () => {
   )
 };
 
-export default NavLink;
+export default Navbar;

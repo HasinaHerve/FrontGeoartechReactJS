@@ -1,7 +1,10 @@
 import 'font-awesome/css/font-awesome.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHouse, faNewspaper, faBriefcase, faUsers, faUser } from '@fortawesome/free-solid-svg-icons';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.min.css"; 
+import "@popperjs/core"; 
+import "bootstrap";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
